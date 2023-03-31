@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="code_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .auto-style1 {
+            width: 100%;
+            border-collapse: collapse;
+            height: 723px;
+        }
+
+        .auto-style3 {
+            /*height: 57px;*/
+            height: 50px;
+        }
+
+        .auto-style7 {
+            text-align: right;
+            background-color: #D9E7F2;
+            width: 24%;
+            height: 11px;
+        }
+
+        .btn {
+            border: solid 1px #586ae7;
+            text-align: center;
+        }
+
+        .auto-style8 {
+            text-align: left;
+            background-color: #D9E7F2;
+            width:3%;
+            height: 11px;
+        }
+
+        .auto-style12 {
+            width: 43px;
+            /*height: 26px;*/
+            vertical-align: middle;
+            height: 20px;
+        }
+
+        .auto-style15 {
+            /*height: 872px;*/
+        }
+
+        .auto-style16 {
+            height: 86px;
+            text-align: center;
+        }
+
+        .auto-style18 {
+            height: 513px;
+            background-color:#D9E7F2;
+            width: 3%;
+        }
+
+        .auto-style19 {
+            height: 513px;
+            text-align: center;
+        }
+        .auto-style20 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="height: 719px">
+    <form id="form1" runat="server">
+        <div class="auto-style15">
+            <%--<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">--%>
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style8">
+                            <img src="/image/logo.jpg" class="auto-style12" /> </td>
+                        <td class="auto-style7">您好，欢迎登录&nbsp;
+                            <asp:Button ID="Button1" runat="server" Text="退出" CssClass="btn" OnClick="Button1_Click" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style3" colspan="2" style="background-color: #7f95d6; color: #000000; font-size: x-large;">&nbsp;&nbsp;&nbsp; 城市公交管理系统
+                            <%--<img alt="" class="auto-style5" src="../image/banner02.jpg" />--%>
+                            &nbsp;&nbsp;&nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style18">
+                            <asp:TreeView ID="TreeView1" runat="server" Height="414px" ImageSet="Simple" Width="45%" CssClass="auto-style20">
+                                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                                <Nodes>
+                                    <asp:TreeNode NavigateUrl="~/code/yuangong/main.aspx" Text="员工界面首页" Value="员工界面首页"></asp:TreeNode>
+                                    <asp:TreeNode Text="查看个人信息" Value="查询" NavigateUrl="~/code/yuangong/lookyuangonginfo.aspx">
+                                    </asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/code/yuangong/lookdiscuss.aspx" Text="查看留言评论" Value="查看留言评论"></asp:TreeNode>
+                                </Nodes>
+                                <NodeStyle Font-Names="Tahoma" Font-Size="15pt" ForeColor="Black" HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                                <ParentNodeStyle Font-Bold="False" />
+                                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                            </asp:TreeView>
+                        </td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <td class="auto-style19" style="font-size: x-large"></td>
+                        </asp:ContentPlaceHolder>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="auto-style16" style="background-color: #7f95d6; color: #000000; font-size: x-small;">城市公交管理系统<br />Copyright 2021 citysystem<br />关于城市公交管理系统 帮助中心 联系管理员</td>
+                    </tr>
+                </table>
+            <%--</asp:ContentPlaceHolder>--%>
+        </div>
+    </form>
+</body>
+</html>
